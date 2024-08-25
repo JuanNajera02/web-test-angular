@@ -1,0 +1,38 @@
+<h3 class="titulo"> Artículos </h3>
+
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+  <input type="hidden" formControlName="itemId"> <!-- Campo oculto para el ID -->
+
+  <mat-form-field appearance="fill">
+    <mat-label>Código</mat-label>
+    <input matInput formControlName="code">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descripción</mat-label>
+    <input matInput formControlName="description">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Precio</mat-label>
+    <input matInput formControlName="price" type="number">
+  </mat-form-field>
+
+
+    <div class="form-group">
+      <div class="fileclass">
+      <input type="file" (change)="onFileChange($event)">
+      <div *ngIf="fileName" class="file-info">
+        <p>{{ fileName }}</p>
+        <img *ngIf="imageSrc" [src]="imageSrc" alt="Image Preview" class="image-preview">
+      </div>
+    </div>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Stock</mat-label>
+    <input matInput formControlName="stock" type="number">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Guardar</button>
+</form>

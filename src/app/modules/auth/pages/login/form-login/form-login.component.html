@@ -1,0 +1,31 @@
+<div class="contenedorPrincipal">
+  <form>
+    <div class="contenedorImagen">
+      <img class="imagenLogo" src="../../../../../../assets/carrito.png" alt="logo">
+    </div>
+
+    <div class="contenedorLogin">
+
+      <div class="contenedorInputs">
+      <mat-form-field  >
+        <input matInput type="email" id="email" name="email" placeholder="Email" [(ngModel)]="creds.email" />
+      </mat-form-field>
+
+      <mat-form-field >
+        <input matInput type="password" id="password" name="password" placeholder="Contraseña" [(ngModel)]="creds.password" />
+      </mat-form-field>
+
+    </div>
+      <button type="submit" class="boton btn" (click)="login()">Iniciar Sesion</button>
+
+      <div class="registrarse">
+        <p>¿Eres nuevo?</p>
+        <a href="/create-account">Crear Cuenta</a>
+      </div>
+
+
+
+    </div>
+  </form>
+</div>
+

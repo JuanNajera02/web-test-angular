@@ -1,0 +1,79 @@
+/* items-form.component.css */
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titulo{
+  text-align: center;
+  color: #4B4453;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #333; /* Color del borde inferior */
+  font-size: 16px; /* Tamaño de fuente para los inputs */
+}
+
+.imglbl{
+  margin-left: 13px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  font-size: 16px; /* Tamaño de fuente del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados del botón */
+  padding: 8px 16px; /* Padding del botón */
+  cursor: pointer; /* Cursor de puntero al pasar por encima */
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: #333; /* Fondo del botón en hover */
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px; /* Espacio entre los campos del formulario */
+}
+
+mat-form-field mat-label {
+  color: #333; /* Color del texto de las etiquetas */
+}
+
+mat-form-field input {
+  font-size: 16px; /* Tamaño de fuente para los inputs */
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 20px; /* Espacio arriba del botón */
+  padding: 12px; /* Padding del botón */
+}
+
+
+.fileclass {
+  display: flex;
+  flex-direction: row; /* Alinea los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  gap: 10px; /* Espacio entre los elementos */
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column; /* Coloca el nombre del archivo y la imagen verticalmente */
+  align-items: center; /* Centra los elementos dentro del contenedor */
+}
+
+.image-preview {
+  width: 100px; /* Ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-top: 10px; /* Espacio entre el nombre del archivo y la imagen */
+}
+
