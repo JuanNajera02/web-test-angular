@@ -17,5 +17,14 @@ export class NavBarComponent {
     this.router.navigate(['/stores']);
   }
 
+  gotoUsers(): void {
+    this.router.navigate(['/users']);
+  }
+
+  logout(): void {
+    localStorage.removeItem('id');
+    this.router.navigate(['/login']);
+  }
+
 
 }

@@ -2,33 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: #FDF7FF;
   width: 400px;
-  border-radius: 40px;
-  max-height: 700px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+  border-radius: 30px;
+  max-height: 850px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
 }
 
-
-
-.contenedorLogin{
+.contenedorLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
-  width: 300px;
+  width: 280px;
   margin: 0 auto;
-  padding: 30px;
-}
-
-p{
-  color: #4B4453;
-}
-
-a{
-  color: #4B4453;
-  margin-top: 15px;
+  padding: 20px;
 }
 
 .contenedorImagen {
@@ -37,7 +27,7 @@ a{
   background-color: #FFF8F0;
   align-items: center;
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
 }
 
@@ -45,77 +35,53 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  max-height: 150px;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
-.contenedorPag {
-  min-height: 100vh;
-}
-
-.registrarse{
-  display: flex;
-  margin-top: 20px;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.boton{
+  max-height: 120px;
   margin-top: 15px;
-  background-color: #9B89B3; /* Color de fondo */
-  color: #FDF7FF; /* Color del texto */
+  margin-right: 15px;
+}
+
+.boton {
+  margin-top: 10px;
+  background-color: #9B89B3;
+  color: #FDF7FF;
   border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
+  border-radius: 8px;
+  padding: 8px 16px;
   cursor: pointer;
-  height: 45px;
-  font-size: 1rem;
+  height: 40px;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 85%;
 }
 
-
-.registrarse p{
-  margin-top: 10px;
-}
-
-
-.registrarse a {
-  color: #080708;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-}
-
-
-.inputLogin{
-  border-radius: 10px;
-  background-color: #d9d9d9;
-  padding: 10px;
-  width: 90%;
-  height: 50px;
-  border: none;
-}
-.inputStyles{
-  width: 90%;
+.inputStyles {
+  width: 85%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.divBotones{
+.divBotones {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  gap: 20px;
+  gap: 15px;
   width: 100%;
 }
 
-.contenedorInputs{
+.contenedorInputs {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Contenedor principal que envuelve el contenido de la página */
+

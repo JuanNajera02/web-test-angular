@@ -5,14 +5,17 @@ import { CreateAccountComponent } from './modules/auth/pages/create-account/crea
 import { HomeComponent } from './modules/main/pages/home/home.component';
 import { ItemsComponent } from './modules/main/pages/items/items.component';
 import { StoresComponent } from './modules/main/pages/stores/stores.component';
+import { UsersComponent } from './modules/main/pages/users/users.component';
+import { AuthGuard } from '../app/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'create-account', component: CreateAccountComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'items', component: ItemsComponent},
-  { path: 'stores', component: StoresComponent}
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'items', component: ItemsComponent, canActivate: [AuthGuard] },
+  { path: 'stores', component: StoresComponent, canActivate: [AuthGuard] },
+  { path: 'users', component: UsersComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

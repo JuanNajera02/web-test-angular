@@ -60,12 +60,7 @@ img {
 }
 
 
-.registrarse{
-  display: flex;
-  margin-top: 20px;
-  flex-direction: row;
-  gap: 10px;
-}
+
 
 .boton{
   margin-top: 15px;
@@ -86,7 +81,9 @@ img {
 
 
 .registrarse {
-  text-align: center;
+  /* elimina el espacio dentro de este contenedor entre los items dentro */
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
 }
 

@@ -1,0 +1,20 @@
+/* Asegúrate de que el formulario tenga un margen adecuado */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+button {
+  margin-top: 16px;
+}
+
+.titulo{
+  text-align: center;
+  margin-bottom: 20px;
+}

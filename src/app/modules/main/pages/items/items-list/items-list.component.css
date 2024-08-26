@@ -21,3 +21,10 @@ img {
   max-height: 600px; /* Altura máxima antes de que aparezca el scrollbar */
   overflow-y: auto; /* Scroll vertical si el contenido excede la altura */
 }
+
+.center {
+  text-align: center;
+  font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+  margin-bottom: 20px; /* Espacio inferior para separar el título de la tabla */
+  margin-top: 30px;
+}

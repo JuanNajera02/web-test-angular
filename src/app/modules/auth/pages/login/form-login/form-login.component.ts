@@ -33,6 +33,7 @@ export class FormLoginComponent {
         next: (data) => {
           console.log(data);
           alert('Usuario logueado con éxito');
+          localStorage.setItem('id', data.id);
           this.router.navigate(['/home']);
         },
         error: (error) => {

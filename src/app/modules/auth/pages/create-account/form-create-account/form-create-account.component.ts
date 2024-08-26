@@ -43,8 +43,10 @@ export class FormCreateAccountComponent {
       this.auth.createAccount(this.client).subscribe({
         next: (data) => {
           console.log(data);
+          //guarda el id del usuario en el local storage
+          localStorage.setItem('id', data.id);
           alert('Usuario registrado con éxito');
-          this.router.navigate(['/login']);
+          this.router.navigate(['/home']);
         },
         error: (error) => {
           console.error('Hubo un error!', error);
