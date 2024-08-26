@@ -12,4 +12,10 @@ export class NavBarComponent {
   goToItems(): void {
     this.router.navigate(['/items']);
   }
+
+  goToStores(): void {
+    this.router.navigate(['/stores']);
+  }
+
+
 }

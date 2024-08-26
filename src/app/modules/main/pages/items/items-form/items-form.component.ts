@@ -11,7 +11,7 @@ import { ItemList } from '../models/itemList.model';
 export class ItemsFormComponent implements OnInit {
   itemForm: FormGroup;
   imageSrc: string | ArrayBuffer = '';
-  fileName = 'imagen';
+  fileName = '';
 
 
   constructor(private fb: FormBuilder, private itemsService: ItemsService) {
@@ -28,9 +28,9 @@ export class ItemsFormComponent implements OnInit {
   ngOnInit(): void {
     this.itemsService.currentItem$.subscribe(item => {
       if (item) {
-        this.itemForm.patchValue(item); // Rellena el formulario con los datos del artículo
+        this.itemForm.patchValue(item);
         this.imageSrc = 'data:image/jpeg;base64,' + item.image;
-        this.fileName = 'Imagen Cargada'; // O el nombre original si lo tienes
+        this.fileName = 'Imagen Cargada';
       }
     });
   }
@@ -48,7 +48,7 @@ export class ItemsFormComponent implements OnInit {
             alert('Item actualizado con éxito');
           },
           error: (error) => {
-            console.error('Hubo un error!', error);
+            alert('Hubo un error!');
           }
         });
       } else {
@@ -59,12 +59,12 @@ export class ItemsFormComponent implements OnInit {
             alert('Item creado con éxito');
           },
           error: (error) => {
-            console.error('Hubo un error!', error);
+            alert('Hubo un error!');
           }
         });
       }
     } else {
-      console.error('Formulario no válido');
+      alert('Por favor, completa el formulario');
     }
   }
 
@@ -89,4 +89,11 @@ export class ItemsFormComponent implements OnInit {
               this.imageSrc = result;
     };
   }
+
+  onCancel(): void {
+    this.itemForm.reset();
+    this.imageSrc = '';
+    this.fileName = '';
+  }
+
 }

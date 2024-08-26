@@ -10,6 +10,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { StoresComponent } from './pages/stores/stores.component';
+import { StoresFormComponent } from './pages/stores/stores-form/stores-form.component';
+import { StoresListComponent } from './pages/stores/stores-list/stores-list.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { UsersComponent } from './pages/users/users.component';
+import { UsersFormComponent } from './pages/users/users-form/users-form.component';
+import { UsersListComponent } from './pages/users/users-list/users-list.component';
+
 
 
 
@@ -18,7 +27,13 @@ import { MatTableModule } from '@angular/material/table';
     HomeComponent,
     ItemsComponent,
     ItemsListComponent,
-    ItemsFormComponent
+    ItemsFormComponent,
+    StoresComponent,
+    StoresFormComponent,
+    StoresListComponent,
+    UsersComponent,
+    UsersFormComponent,
+    UsersListComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +42,9 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   exports: [
     HomeComponent

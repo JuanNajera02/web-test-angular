@@ -1,0 +1,61 @@
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.store-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre los elementos */
+  max-height: 300px; /* Altura máxima antes de que aparezca el scrollbar */
+  overflow-y: auto; /* Scroll vertical si el contenido excede la altura */
+}
+
+.item-checkbox {
+  display: flex;
+  justify-content: center;
+  width: calc(33.33% - 10px); /* Tres elementos por fila */
+  box-sizing: border-box;
+  text-align: center; /* Centra el contenido dentro del checkbox */
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+  margin-bottom: 5px; /* Espacio entre la imagen y el código */
+}
+
+.item-code {
+  font-size: 14px;
+  color: #333; /* Color del texto */
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mat-checkbox-layout {
+  width: 100%;
+}
+
+

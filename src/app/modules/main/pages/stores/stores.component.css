@@ -40,3 +40,14 @@ html, body {
 .footer-content > span {
   margin: 0;
 }
+
+.centrarLista{
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+
+

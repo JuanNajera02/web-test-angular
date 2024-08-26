@@ -5,16 +5,31 @@ import { url } from '../url';
 import { Item } from '../modules/main/pages/items/models/item.model';
 import { BehaviorSubject } from 'rxjs';
 import { ItemList } from '../modules/main/pages/items/models/itemList.model';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.loadItems();
+  }
+
+  private itemsSubject = new BehaviorSubject<ItemList[]>([]);
+  items$ = this.itemsSubject.asObservable();
+
+  private loadItems(): void {
+    this.getItems().subscribe(items => {
+      this.itemsSubject.next(items);
+    });
+  }
+
 
   createItem(item: Item):Observable<any>{
-    return this.http.post(`${url}/api/Items/AddItem`,item)
+    return this.http.post(`${url}/api/Items/AddItem`,item).pipe(
+      tap(() => this.loadItems())
+    )
   }
 
   getItems(): Observable<any> {
@@ -38,7 +53,9 @@ export class ItemsService {
   }
 
   updateItem(item: ItemList): Observable<any> {
-    return this.http.put(`${url}/api/Items/UpdateItem`, item);
+    return this.http.put(`${url}/api/Items/UpdateItem`, item).pipe(
+      tap(() => this.loadItems())
+    )
   }
 
 
