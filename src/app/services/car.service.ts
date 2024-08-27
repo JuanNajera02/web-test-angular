@@ -27,6 +27,10 @@ export class CarService {
     }
 
 
+    getItemsFromCart(clientId: number): Observable<ItemStoreRelation[]> {
+      return this.http.get<ItemStoreRelation[]>(`${url}/api/ClientItemRelation/GetClientItemRelationByClientId?clientId=${clientId}`);
+    }
+
 
 
 

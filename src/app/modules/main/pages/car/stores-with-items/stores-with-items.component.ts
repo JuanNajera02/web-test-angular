@@ -37,7 +37,11 @@ export class StoresWithItemsComponent implements OnInit {
 
   loadItems(): void {
     this.carService.getItemsFromStore(this.storeId).subscribe((data: ItemStoreRelation[]) => {
-      this.items = data.map(item => ({ ...item, quantity: 1 }));
+      // Filtrar los ítems para excluir los que tienen stock 0
+      this.items = data
+        .filter(item => item.item.stock > 0) // Filtrar ítems con stock > 0
+        .map(item => ({ ...item, quantity: 1 }));
+
       this.totalItems = this.items.length;
       this.updatePagedItems();
       console.log('Items:', this.items);
