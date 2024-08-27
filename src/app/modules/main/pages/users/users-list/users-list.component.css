@@ -1,0 +1,23 @@
+/* Centra el título de la lista */
+h3 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Ajusta el tamaño de la tabla y habilita el scroll si es necesario */
+table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Añade espacio entre los botones */
+button {
+  margin-right: 8px;
+}
+
+.center {
+  text-align: center;
+  font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+  margin-bottom: 20px; /* Espacio inferior para separar el título de la tabla */
+  margin-top: 30px;
+}

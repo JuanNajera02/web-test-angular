@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+}
+
+mat-header-cell, mat-cell {
+  text-align: left;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+}
+
+.tabla {
+  max-width: 80%; /* Ajusta el ancho máximo de la tabla según tus necesidades */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  border-radius: 4px; /* Redondea las esquinas del contenedor */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre los elementos */
+  max-height: 600px; /* Altura máxima antes de que aparezca el scrollbar */
+  overflow-y: auto; /* Scroll vertical si el contenido excede la altura */
+}
+
+.center {
+  text-align: center;
+  font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+  margin-bottom: 20px; /* Espacio inferior para separar el título de la tabla */
+  margin-top: 30px;
+}

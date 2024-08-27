@@ -1,0 +1,19 @@
+<div class="purchases-container">
+  <h2>Mis Compras</h2>
+  <div class="purchases-list">
+    <ul>
+      <li *ngFor="let item of purchasedItems">
+        <div class="item-info">
+          <img *ngIf="item.item.image" [src]="'data:image/jpeg;base64,' + item.item.image" alt="{{ item.item.description }}">
+          <div class="item-details">
+            <h3>{{ item.item.description }}</h3>
+            <p>Código: {{ item.item.code }}</p>
+            <p>Precio: ${{ item.item.price }}</p>
+            <p>Cantidad: {{ item.quantity }}</p>
+            <p>Fecha de compra: {{ item.dateAdded | date }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

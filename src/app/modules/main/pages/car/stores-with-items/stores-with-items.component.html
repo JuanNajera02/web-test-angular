@@ -1,0 +1,34 @@
+<div class="app-container">
+  <app-nav-bar></app-nav-bar>
+  <div class="main-content">
+    <div class="items-container">
+      <mat-card *ngFor="let item of pagedItems" class="item-card">
+        <mat-card-header>
+          <mat-card-title>{{ item.item.description }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Código: {{ item.item.code }}</p>
+          <p>Precio: {{ item.item.price | currency }}</p>
+          <p>Stock: {{ item.item.stock }}</p>
+          <img *ngIf="item.item.image" [src]="'data:image/jpeg;base64,' + item.item.image" alt="{{ item.item.description }}" class="item-image" />
+
+          <mat-form-field appearance="fill" class="quantity-field">
+            <mat-label>Cantidad</mat-label>
+            <input matInput type="number" min="1" [max]="item.item.stock" [(ngModel)]="item.quantity">
+            <mat-error *ngIf="item.quantity > item.item.stock">No puede superar el stock disponible</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary" (click)="addToCart(item)">Agregar al carrito</button>
+          <button mat-button color="accent" (click)="buyNow(item)">Comprar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <mat-paginator [length]="totalItems"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[8, 16, 24]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,28 @@
+<h3 class="form-title">Tiendas</h3>
+
+<form [formGroup]="storeForm" (ngSubmit)="onSubmit()" class="store-form">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Sucursal</mat-label>
+    <input matInput formControlName="branch">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Direccion</mat-label>
+    <input matInput formControlName="address">
+  </mat-form-field>
+
+  <h4 class="center">Artículos para la Tienda</h4>
+  <div formArrayName="items" class="items-container">
+    <div *ngFor="let item of items; let i = index" class="item-checkbox">
+      <mat-checkbox
+        [checked]="isSelected(item.itemId)"
+        (change)="toggleItem(item.itemId)">
+        <img *ngIf="item.image" [src]="item.image" alt="Image of {{item.code}}" class="item-image">
+        {{item.code}}
+      </mat-checkbox>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit" class="submit-button">Guardar</button>
+  <button mat-raised-button color="warn" type="button" (click)="onCancel()" class="cancel-button">Cancelar</button>
+</form>
