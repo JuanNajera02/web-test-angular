@@ -18,7 +18,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { UsersComponent } from './pages/users/users.component';
 import { UsersFormComponent } from './pages/users/users-form/users-form.component';
 import { UsersListComponent } from './pages/users/users-list/users-list.component';
-
+import { CarComponent } from './pages/car/car.component';
+import { StoresCardsComponent } from './pages/car/stores-cards/stores-cards.component';
+import { StoresWithItemsComponent } from './pages/car/stores-with-items/stores-with-items.component';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { CarToPayComponent } from './pages/car-to-pay/car-to-pay.component';
+import { PayListComponent } from './pages/car-to-pay/pay-list/pay-list.component';
+import { PurchasesComponent } from './pages/purchases/purchases.component';
+import { MyPurchasesComponent } from './pages/purchases/my-purchases/my-purchases.component';
 
 
 
@@ -33,7 +42,14 @@ import { UsersListComponent } from './pages/users/users-list/users-list.componen
     StoresListComponent,
     UsersComponent,
     UsersFormComponent,
-    UsersListComponent
+    UsersListComponent,
+    CarComponent,
+    StoresCardsComponent,
+    StoresWithItemsComponent,
+    CarToPayComponent,
+    PayListComponent,
+    PurchasesComponent,
+    MyPurchasesComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +60,10 @@ import { UsersListComponent } from './pages/users/users-list/users-list.componen
     ReactiveFormsModule,
     MatTableModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    FormsModule,
+    MatPaginatorModule
   ],
   exports: [
     HomeComponent

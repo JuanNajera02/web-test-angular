@@ -28,14 +28,6 @@ p {
   margin-bottom: 30px;
 }
 
-.estilos-main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-}
 
 /* Estilo del footer */
 .footer {

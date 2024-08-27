@@ -48,6 +48,7 @@ export class StoresService {
       items
     });
   }
+  
   updateItemsToStore(storeId: any, items: number[]): Observable<ItemStoreRelation> {
     return this.http.put<ItemStoreRelation>(`${url}/api/ItemStoreRelation/UpdateItemsToStore`, {
       storeId,

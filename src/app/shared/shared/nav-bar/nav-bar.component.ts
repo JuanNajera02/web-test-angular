@@ -26,5 +26,21 @@ export class NavBarComponent {
     this.router.navigate(['/login']);
   }
 
+  gotoHome(): void {
+    this.router.navigate(['/home']);
+  }
+
+  gotoCar(): void {
+    this.router.navigate(['/car']);
+  }
+
+  goToPay(): void {
+    this.router.navigate(['/car-to-pay']);
+  }
+
+  goToMyPurchases(): void {
+    this.router.navigate(['/purchases']);
+  }
+
 
 }

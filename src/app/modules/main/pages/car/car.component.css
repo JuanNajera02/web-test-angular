@@ -59,3 +59,15 @@ p {
 .footer-content > span {
   margin: 0;
 }
+
+.contenedor-tarjetas{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  /* añade scroll al superar sierta height */
+  max-height: 500px;
+  overflow-y: auto;
+  
+}

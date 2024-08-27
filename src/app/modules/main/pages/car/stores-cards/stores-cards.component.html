@@ -1,0 +1,11 @@
+<div class="stores-container">
+  <mat-card *ngFor="let store of stores" class="store-card">
+    <mat-card-title>{{ store.branch }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ store.address }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="viewStore(store.storeId)">Ver tienda</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

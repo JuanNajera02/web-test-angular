@@ -1,12 +1,13 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button>
+  <button mat-icon-button (click)="goToPay()">
     <mat-icon>shopping_cart</mat-icon>
   </button>
-  <h4>Tienda En Linea</h4>
+  <button mat-button (click)="gotoHome()"><h4>Tienda En Linea</h4></button>
   <span class="spacer"></span>
-  <button mat-button>Comprar</button>
+  <button mat-button (click)="gotoCar()">Comprar</button>
   <button mat-button (click)="goToStores()">Gestionar Tiendas</button>
   <button mat-button (click)="goToItems()">Gestionar Artículos</button>
+  <button mat-button (click)="goToMyPurchases()">Mis Compras</button>
   <button mat-button (click)="gotoUsers()">Usuarios</button>
   <button mat-button (click)="logout()">Salir</button>
 </mat-toolbar>

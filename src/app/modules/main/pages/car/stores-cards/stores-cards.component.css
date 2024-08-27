@@ -1,0 +1,43 @@
+.stores-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Aumenté el espacio entre las tarjetas */
+  justify-content: center;
+  padding: 24px; /* Aumenté el padding para centrar mejor */
+}
+
+.store-card {
+  width: 260px; /* Reduje el ancho para hacer la tarjeta más cuadrada */
+  height: 260px; /* Añadí una altura fija para hacerla más cuadrada */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px; /* Hice las esquinas un poco más redondeadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Aumenté la sombra para más profundidad */
+  padding: 16px; /* Añadí padding interno para un mejor espaciado */
+}
+
+mat-card {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+mat-card-title {
+  text-align: center; /* Centré el título */
+  font-weight: bold;
+}
+
+mat-card-content {
+  flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
